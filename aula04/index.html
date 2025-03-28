@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Aula 20/03</title>
+    <title>Verificar Nota</title>
 </head>
 <body>
     <h2>Verificar Nota do Aluno</h2>
@@ -13,24 +12,30 @@
     <p id="resultado"></p>
 
     <script>
-        function verificarNota(){
-            var nota = document.getElementById("nota").value;
-            var resultado = document.getElementById("resultado");
+        function verificarNota() {
+            var nota = document.getElementById("nota").value; // Pegando o valor digitado
+            var resultado = document.getElementById("resultado"); // Pegando o parágrafo para exibir o resultado
 
+            // Verifica se o campo está vazio ou se não é um número
+            if (nota === "" || isNaN(nota)) {
+                resultado.textContent = "Por favor, digite um número válido!";
+                return;
+            }
+
+            // Converte o valor para número
             nota = Number(nota);
 
-            if (nota >= 7){
-                resultado.textContent = "Aprovado!!!";
-            }if (nota > 10){
-                resultado.textContent = "Nota Invalida!"
-            }else if (nota >= 5){
-                resultado.textContent = "Recuperaçao!!";
-            } else{
-                resultado.textContent = "REPROVADO!!!";
+            // Verifica se a nota está entre 0 e 10
+            if (nota < 0 || nota > 10) {
+                resultado.textContent = "Nota inválida! Digite um valor entre 0 e 10.";
+            } else if (nota >= 7) {
+                resultado.textContent = "Aprovado!";
+            } else if (nota >= 5) {
+                resultado.textContent = "Recuperação!";
+            } else {
+                resultado.textContent = "Reprovado!";
             }
         }
     </script>
-
-
 </body>
 </html>
