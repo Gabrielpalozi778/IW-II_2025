@@ -21,7 +21,9 @@
 
             if (nota >= 7){
                 resultado.textContent = "Aprovado!!!";
-            } else if (nota >= 5){
+            }if (nota > 10){
+                resultado.textContent = "Nota Invalida!"
+            }else if (nota >= 5){
                 resultado.textContent = "Recuperaçao!!";
             } else{
                 resultado.textContent = "REPROVADO!!!";
