@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+<body>
+    <!--Esses exercicios foram feitos em dupla, por Allyson R 2°C e Gabriel Pallozi 2°C-->
+    <p>10. Criar carrossel simples de imagens</p> 
+    <img src="/AULA09/imgs/carrin1.jpg" alt="">
+    <img src="/AULA09/imgs/carrin2.jpg" alt="">
+    <img src="/AULA09/imgs/doge.jpg" alt="">
+    <button id="anterior">Anterior</button> 
+    <button id="proximo">Próximo</button> 
+    <script> 
+        const imagens = ["img1.jpg", "img2.jpg", "img3.jpg"]; 
+        let atual = 0; 
+        const carrossel = document.getElementById("carrossel"); 
+        document.getElementById("proximo").addEventListener("click", () => { 
+        atual = (atual + 1) % imagens.length; carrossel.src = imagens [atual]; 
+        }); 
+        document.getElementById("anterior").addEventListener("click", () => { 
+        atual = (atual - 1+ imagens.length) % imagens.length; 
+        carrossel.src = imagens [atual]; 
+        }); 
+</script>
+</body>
+</html>

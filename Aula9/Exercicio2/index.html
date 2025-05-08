@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+<body>
+    <p></p>
+    <input id="novoItem" placeholder="Novoitem"/>
+    <button id="adicionar">Adicionar</button>
+    <ul id="lista"></ul>
+    <script>
+
+        document.getElementById("adicionar").addEventListener("click", function (){
+            const texto = document.getElementById("novoItem").value;
+            const li = document.getElementById("novoItem").value;
+            li.innerText = texto;
+            document.getElementById("lista").appendChild(li);
+            document.getElementById("novoItem").value = "";
+
+
+        });
+    
+
+
+
+
+    </script>
+        <!--Esses exercicios foram feitos em dupla, por Allyson R 2°C e Gabriel Pallozi 2°C-->
+    
+</body>
+</html>

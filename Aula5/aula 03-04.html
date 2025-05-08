@@ -3,59 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AULA05</title>
 </head>
 <body>
-    <script>
-        function exibirMenu() {
+    
+    
+</body>
+</html>
+<script>
+    function exibirMenu() {
         return prompt(
             "===== MENU INTERATIVO =====\n" +
-            "1 - Calcular Média\n" +
-            "2 - Sair\n" +
+            "1 - Calcular média\n" +
+            "2 - Ver mensagem\n" +
+            "3 - Sair\n" +
             "Escolha uma opção:"
-    );
-}
+        );
+    }
 
     function calcularMedia() {
         let nota1 = parseFloat(prompt("Digite a primeira nota:"));
         let nota2 = parseFloat(prompt("Digite a segunda nota:"));
         
         if (isNaN(nota1) || isNaN(nota2)) {
-            alert("Erro: Você deve digitar números válidos.");
+            alert("Erro: Digite números válidos!");
             return;
         }
-        
+
         let media = (nota1 + nota2) / 2;
-        let mensagem;
-        
-        if (media >= 7) {
-            mensagem = "Aprovado";
-        } else if (media >= 5) {
-            mensagem = "Recuperação";
-        } else {
-            mensagem = "Reprovado";
-        }
-        
-        alert(`Sua média é ${media.toFixed(2)}. Resultado: ${mensagem}`);
+        let situacao;
+
+        if (media >= 7) situacao = "Aprovado! 🎉";
+        else if (media >= 5) situacao = "Recuperação!";
+        else situacao = "Reprovado!";
+
+        alert("Média:". media,"\nSituação:". situacao);
     }
 
     function executarOpcao(opcao) {
-        switch (opcao) {
+        switch(opcao) {
             case "1":
                 calcularMedia();
                 break;
             case "2":
-                alert("Saindo... Até mais!");
-                return false;
+                alert("Bem-vindo ao sistema de notas!");
+                break;
+            case "3":
+                alert("Até logo!");
+                return false; 
             default:
-                alert("Opção inválida. Tente novamente.");
+                alert("Opção inválida! ❌");
         }
-        return true;
+        return true; 
     }
 
     function iniciarMenu() {
         let continuar = true;
-        while (continuar) {
+        while(continuar) {
             let opcao = exibirMenu();
             continuar = executarOpcao(opcao);
         }
@@ -63,7 +67,4 @@
 
 
     iniciarMenu();
-
-    </script>
-</body>
-</html>
+</script>

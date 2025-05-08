@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+<body>
+        <!--Esses exercicios foram feitos em dupla, por Allyson R 2°C e Gabriel Pallozi 2°C-->
+    <p>3. Remover item da lista ao clicar no botao</p>
+    <ul id="lista">
+        <li>item 1 <button class="remover">X</button></li>
+    </ul>
+    <script>
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("remover")) {
+                e.target.parentElement.remove();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+<body>
+    <!--Esses exercicios foram feitos em dupla, por Allyson R 2°C e Gabriel Pallozi 2°C-->
+    <p>9. Filtrar lista com termo de busca</p> 
+<input id="filtro" placeholder="Buscar..."> 
+<ul id="lista"> 
+    <li>Maçã</11> 
+    <li>Banana</li> 
+    <li>Laranja</H> 
+</ul> 
+<script> 
+document.getElementById("filtro").addEventListener("input", function () { 
+const termo = this.value.toLowerCase(); 
+const itens = document.querySelectorAll("#lista 11"); 
+itens.forEach(item) = (item.style.display = item.innerText.toLowerCase().includes (termo) ? "list-item": "none"); 
+}); 
+ 
+</script>
+</body>
+</html>
